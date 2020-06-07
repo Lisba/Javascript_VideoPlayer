@@ -3,14 +3,25 @@
   "version": "1.0.0",
   "description": "Proyecto del Curso Profesional de JavaScript de la Escuela de JavaScript de Platzi.",
   "license": "MIT",
-  "author": "Richard B. Kaufman López <richardbkaufman@gmail.com>",
+  "author": "Lisbaldy Ojeda León <lisba7474@gmail.com>",
   "keywords": [
     "platzi"
   ],
   "scripts": {
-    "start": "live-server"
+    "start": "parcel index.html"
   },
   "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.5"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.10.2"
+  },
+  "plugins": [
+    "@babel/plugin-transform-runtime"
+  ]
 }
