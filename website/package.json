@@ -1,0 +1,28 @@
+{
+  "name": "platzi-media-player",
+  "version": "1.0.0",
+  "description": "Proyecto del Curso Profesional de JavaScript de la Escuela de JavaScript de Platzi.",
+  "license": "MIT",
+  "author": "Lisbaldy Ojeda León <lisba7474@gmail.com>",
+  "keywords": [
+    "platzi"
+  ],
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.5"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.10.2",
+    "@lisba/platzi_mediaplayer": "^1.0.0"
+  },
+  "plugins": [
+    "@babel/plugin-transform-runtime"
+  ]
+}
