@@ -130,8 +130,16 @@ function () {
   function MediaPlayer(config) {
     this.media = config.el;
     this.plugins = config.plugins || [];
+    this.initPlayer();
     this.initPlugins();
   }
+
+  MediaPlayer.prototype.initPlayer = function () {
+    this.container = document.createElement('div');
+    this.container.style.position = 'relative';
+    this.media.parentNode.insertBefore(this.container, this.media);
+    this.container.appendChild(this.media);
+  };
 
   MediaPlayer.prototype.initPlugins = function () {
     var _this = this;
@@ -237,7 +245,7 @@ function () {
 }();
 
 exports.default = AutoPause;
-},{}],"assets/plugins/Ads/ads.ts":[function(require,module,exports) {
+},{}],"assets/plugins/Ads/Ads.ts":[function(require,module,exports) {
 "use strict";
 
 var __spreadArrays = this && this.__spreadArrays || function () {
@@ -337,18 +345,20 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var ads_1 = __importDefault(require("./ads"));
+var Ads_1 = __importDefault(require("./Ads"));
 
 var AdsPlugin =
 /** @class */
 function () {
   function AdsPlugin() {
-    this.ads = ads_1.default.getInstance();
+    this.ads = Ads_1.default.getInstance();
+    this.adsContainer = document.createElement('div');
     this.handleTimeUpdate = this.handleTimeUpdate.bind(this);
   }
 
   AdsPlugin.prototype.run = function (player) {
     this.player = player;
+    this.player.container.appendChild(this.adsContainer);
     this.media = this.player.media;
     this.media.addEventListener('timeupdate', this.handleTimeUpdate);
   };
@@ -362,20 +372,26 @@ function () {
   };
 
   AdsPlugin.prototype.renderAd = function () {
+    var _this = this;
+
     if (this.currentAd) {
       return;
     }
 
     var ad = this.ads.getAd();
     this.currentAd = ad;
-    console.log(this.currentAd);
+    this.adsContainer.innerHTML = "\n            <div class=\"ads\">\n                <a class=\"ads__link\" href=\"" + this.currentAd.url + "\" target=\"_blank\">\n                    <img class=\"ads__img\" src=\"" + this.currentAd.imageUrl + "\" />\n                    <div class=\"ads__info\">\n                        <h5 class=\"ads__title\">" + this.currentAd.title + "</h5>\n                        <p class=\"ads__body\">" + this.currentAd.body + "</p>\n                    </div>\n                </a>\n            </div>\n        ";
+    setTimeout(function () {
+      _this.currentAd = null;
+      _this.adsContainer.innerHTML = '';
+    }, 10000);
   };
 
   return AdsPlugin;
 }();
 
 exports.default = AdsPlugin;
-},{"./ads":"assets/plugins/Ads/ads.ts"}],"assets/index.ts":[function(require,module,exports) {
+},{"./Ads":"assets/plugins/Ads/Ads.ts"}],"assets/index.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -445,7 +461,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64360" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57299" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
