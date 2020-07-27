@@ -1,8 +1,8 @@
 // import 'regenerator-runtime/runtime'
-import MediaPlayer from '@lisba/platzi_mediaplayer/src/MediaPlayer';
-import AutoPlay from '@lisba/platzi_mediaplayer/src/plugins/AutoPlay';
-import AutoPause from '@lisba/platzi_mediaplayer/src/plugins/AutoPause';
-import Ads from '@lisba/platzi_mediaplayer/src/plugins/Ads';
+import MediaPlayer from '@lisba/media_player/lib/MediaPlayer';
+import AutoPlay from '@lisba/media_player/lib/plugins/AutoPlay';
+import AutoPause from '@lisba/media_player/lib/plugins/AutoPause';
+import Ads from '@lisba/media_player/lib/plugins/Ads';
 
 const video = document.querySelector('video');
 const playPausebutton: HTMLElement = document.getElementById('playPause');

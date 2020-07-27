@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/@lisba/platzi_mediaplayer/src/MediaPlayer.ts":[function(require,module,exports) {
+})({"node_modules/@lisba/media_player/lib/MediaPlayer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -179,7 +179,7 @@ function () {
 
 var _default = MediaPlayer;
 exports.default = _default;
-},{}],"node_modules/@lisba/platzi_mediaplayer/src/plugins/AutoPlay.ts":[function(require,module,exports) {
+},{}],"node_modules/@lisba/media_player/lib/plugins/AutoPlay.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -202,7 +202,7 @@ function () {
 
 var _default = AutoPlay;
 exports.default = _default;
-},{}],"node_modules/@lisba/platzi_mediaplayer/src/plugins/AutoPause.ts":[function(require,module,exports) {
+},{}],"node_modules/@lisba/media_player/lib/plugins/AutoPause.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -251,7 +251,7 @@ function () {
 
 var _default = AutoPause;
 exports.default = _default;
-},{}],"node_modules/@lisba/platzi_mediaplayer/src/plugins/Ads/Ads.ts":[function(require,module,exports) {
+},{}],"node_modules/@lisba/media_player/lib/plugins/Ads/Ads.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -341,7 +341,7 @@ function () {
 
 var _default = Ads;
 exports.default = _default;
-},{}],"node_modules/@lisba/platzi_mediaplayer/src/plugins/Ads/index.ts":[function(require,module,exports) {
+},{}],"node_modules/@lisba/media_player/lib/plugins/Ads/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -398,7 +398,7 @@ function () {
 
 var _default = AdsPlugin;
 exports.default = _default;
-},{"./Ads":"node_modules/@lisba/platzi_mediaplayer/src/plugins/Ads/Ads.ts"}],"assets/index.ts":[function(require,module,exports) {
+},{"./Ads":"node_modules/@lisba/media_player/lib/plugins/Ads/Ads.js"}],"assets/index.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -411,13 +411,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 }); // import 'regenerator-runtime/runtime'
 
-var MediaPlayer_1 = __importDefault(require("@lisba/platzi_mediaplayer/src/MediaPlayer"));
+var MediaPlayer_1 = __importDefault(require("@lisba/media_player/lib/MediaPlayer"));
 
-var AutoPlay_1 = __importDefault(require("@lisba/platzi_mediaplayer/src/plugins/AutoPlay"));
+var AutoPlay_1 = __importDefault(require("@lisba/media_player/lib/plugins/AutoPlay"));
 
-var AutoPause_1 = __importDefault(require("@lisba/platzi_mediaplayer/src/plugins/AutoPause"));
+var AutoPause_1 = __importDefault(require("@lisba/media_player/lib/plugins/AutoPause"));
 
-var Ads_1 = __importDefault(require("@lisba/platzi_mediaplayer/src/plugins/Ads"));
+var Ads_1 = __importDefault(require("@lisba/media_player/lib/plugins/Ads"));
 
 var video = document.querySelector('video');
 var playPausebutton = document.getElementById('playPause');
@@ -440,7 +440,7 @@ if ('serviceWorker' in navigator) {
     console.log(error.message);
   });
 }
-},{"@lisba/platzi_mediaplayer/src/MediaPlayer":"node_modules/@lisba/platzi_mediaplayer/src/MediaPlayer.ts","@lisba/platzi_mediaplayer/src/plugins/AutoPlay":"node_modules/@lisba/platzi_mediaplayer/src/plugins/AutoPlay.ts","@lisba/platzi_mediaplayer/src/plugins/AutoPause":"node_modules/@lisba/platzi_mediaplayer/src/plugins/AutoPause.ts","@lisba/platzi_mediaplayer/src/plugins/Ads":"node_modules/@lisba/platzi_mediaplayer/src/plugins/Ads/index.ts","C:\\Users\\usuario\\Documents\\Platzi\\javascript-profesional\\website\\sw.js":[["sw.js","sw.js"],"sw.js.map","sw.js"]}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"@lisba/media_player/lib/MediaPlayer":"node_modules/@lisba/media_player/lib/MediaPlayer.js","@lisba/media_player/lib/plugins/AutoPlay":"node_modules/@lisba/media_player/lib/plugins/AutoPlay.js","@lisba/media_player/lib/plugins/AutoPause":"node_modules/@lisba/media_player/lib/plugins/AutoPause.js","@lisba/media_player/lib/plugins/Ads":"node_modules/@lisba/media_player/lib/plugins/Ads/index.js","C:\\Users\\usuario\\Documents\\Platzi\\javascript-profesional\\website\\sw.js":[["sw.js","sw.js"],"sw.js.map","sw.js"]}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -468,7 +468,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57731" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52419" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

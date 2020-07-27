@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.10.2",
-    "@lisba/platzi_mediaplayer": "^1.0.0"
+    "@lisba/media_player": "^1.0.1"
   },
   "plugins": [
     "@babel/plugin-transform-runtime"
