@@ -1,4 +1,4 @@
-# Javascript_VidePlayer
+# Javascript_VideoPlayer
 For practicing advanced concepts about Javascript.
 
 ## Notes:
