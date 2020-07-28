@@ -1,9 +1,7 @@
 # Javascript_VideoPlayer
 ![npm](https://img.shields.io/npm/v/@lisba/media_player)
 ![GitHub language count](https://img.shields.io/github/languages/count/Lisba/Javascript_VideoPlayer)
-![GitHub](https://img.shields.io/github/license/Lisba/Javascript_VideoPlayer)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Lisba/Javascript_VideoPlayer)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Lisba/Javascript_VideoPlayer)
 
 For practicing advanced concepts about Javascript.
 
